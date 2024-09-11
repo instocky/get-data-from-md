@@ -7,12 +7,13 @@ from urllib.parse import urlparse
 # Константы для цветного вывода
 GREEN = '\033[92m'
 RED = '\033[91m'
+ORANGE = '\033[93m'
 RESET = '\033[0m'
 
 # Базовый URL
-BASE_URL = 'https://kamkb.ru/sveden/'
 BASE_URL = 'https://kotelbk.ru/sveden/'
 BASE_URL = 'https://academicol.ru/sveden/'
+BASE_URL = 'https://kamkb.ru/sveden/'
 
 # Получаем домен из BASE_URL
 DOMAIN = urlparse(BASE_URL).netloc
@@ -82,23 +83,31 @@ def analyze_page(url, section_name, itemprops):
 
         found_items = []
         missing_items = []
+        hidden_items = []
 
         for prop in itemprops:
-            if soup.find(attrs={"itemprop": prop}):
-                found_items.append(prop)
+            element = soup.find(attrs={"itemprop": prop})
+            if element:
+                if element.has_attr('class') and 'hidden' in element.get('class') and element.text.strip() == "Данные обновляются":
+                    hidden_items.append(prop)
+                else:
+                    found_items.append(prop)
             else:
                 missing_items.append(prop)
 
-        # Вывод в консоль (оставляем без изменений)
+        # Вывод в консоль
         print(f"\nАнализ страницы: {url}")
         print(f"\nСекция: {section_name}\n")
         print("Найденные itemprop:")
         for item in found_items:
             color_print(f"✅ {item}", GREEN)
+        print("\nСкрытые itemprop:")
+        for item in hidden_items:
+            color_print(f"🔸 {item}", ORANGE)
         print("\nОтсутствующие itemprop:")
         for item in missing_items:
             color_print(f"❌ {item}", RED)
-        print(f"\nИтого: {len(found_items)} найдено, {len(missing_items)} отсутствует")
+        print(f"\nИтого: {len(found_items)} найдено, {len(hidden_items)} скрыто, {len(missing_items)} отсутствует")
 
         # Возвращаем HTML-фрагмент для отчета
         return f"""
@@ -109,11 +118,15 @@ def analyze_page(url, section_name, itemprops):
             <ul>
                 {''.join(f'<li class="found">✅ {item}</li>' for item in found_items)}
             </ul>
+            <h4>Скрытые itemprop:</h4>
+            <ul>
+                {''.join(f'<li class="hidden">🔸 {item}</li>' for item in hidden_items)}
+            </ul>
             <h4>Отсутствующие itemprop:</h4>
             <ul>
                 {''.join(f'<li class="missing">❌ {item}</li>' for item in missing_items)}
             </ul>
-            <p>Итого: {len(found_items)} найдено, {len(missing_items)} отсутствует</p>
+            <p>Итого: {len(found_items)} найдено, {len(hidden_items)} скрыто, {len(missing_items)} отсутствует</p>
         </div>
         """
 
