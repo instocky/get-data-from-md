@@ -1,0 +1,548 @@
+{
+  "meta": {
+    "created_at": "2024-09-11T11:19:03.600830",
+    "source_file": "doc.md"
+  },
+  "itemprop_values": [
+    {
+      "itemprop": "purposeLibr"
+    },
+    {
+      "itemprop": "eduPOAccred"
+    },
+    {
+      "itemprop": "websiteFil"
+    },
+    {
+      "itemprop": "comNet"
+    },
+    {
+      "itemprop": "finPost"
+    },
+    {
+      "itemprop": "erListOvz"
+    },
+    {
+      "itemprop": "localAct"
+    },
+    {
+      "itemprop": "purposeEios"
+    },
+    {
+      "itemprop": "perechenNir"
+    },
+    {
+      "itemprop": "purposeFacil"
+    },
+    {
+      "itemprop": "eduCode"
+    },
+    {
+      "itemprop": "resultNir"
+    },
+    {
+      "itemprop": "techOvz"
+    },
+    {
+      "itemprop": "accreditationDocLink"
+    },
+    {
+      "itemprop": "structOrgUprav"
+    },
+    {
+      "itemprop": "fioPost"
+    },
+    {
+      "itemprop": "telephone"
+    },
+    {
+      "itemprop": "eduPriemEl"
+    },
+    {
+      "itemprop": "eduForm"
+    },
+    {
+      "itemprop": "addRef"
+    },
+    {
+      "itemprop": "rucovodstvo"
+    },
+    {
+      "itemprop": "genExperience"
+    },
+    {
+      "itemprop": "tekKontrolDocLink"
+    },
+    {
+      "itemprop": "prescriptionDocLink"
+    },
+    {
+      "itemprop": "teachingLevel"
+    },
+    {
+      "itemprop": "interNumOvz"
+    },
+    {
+      "itemprop": "eduCourse"
+    },
+    {
+      "itemprop": "hostelInfo"
+    },
+    {
+      "itemprop": "shortName"
+    },
+    {
+      "itemprop": "numberBRVacant"
+    },
+    {
+      "itemprop": "erList"
+    },
+    {
+      "itemprop": "dateEnd"
+    },
+    {
+      "itemprop": "health"
+    },
+    {
+      "itemprop": "finBMVolume"
+    },
+    {
+      "itemprop": "meals"
+    },
+    {
+      "itemprop": "hostelNumOvz"
+    },
+    {
+      "itemprop": "graduateJob"
+    },
+    {
+      "itemprop": "emailRep"
+    },
+    {
+      "itemprop": "finYear"
+    },
+    {
+      "itemprop": "eduProf"
+    },
+    {
+      "itemprop": "websiteRep"
+    },
+    {
+      "itemprop": "licenseDocLink"
+    },
+    {
+      "itemprop": "mailUchred"
+    },
+    {
+      "itemprop": "ovzPrac"
+    },
+    {
+      "itemprop": "repInfo"
+    },
+    {
+      "itemprop": "addressRep"
+    },
+    {
+      "itemprop": "addressStr"
+    },
+    {
+      "itemprop": "eduAdOp"
+    },
+    {
+      "itemprop": "internationalDog"
+    },
+    {
+      "itemprop": "eduPrac"
+    },
+    {
+      "itemprop": "numberPVacant"
+    },
+    {
+      "itemprop": "eduChislenEl"
+    },
+    {
+      "itemprop": "purposeSport"
+    },
+    {
+      "itemprop": "workTimeFil"
+    },
+    {
+      "itemprop": "eoisOwn"
+    },
+    {
+      "itemprop": "addressFil"
+    },
+    {
+      "itemprop": "rucovodstvoRep"
+    },
+    {
+      "itemprop": "emailFil"
+    },
+    {
+      "itemprop": "eduStandartDoc"
+    },
+    {
+      "itemprop": "addressPrac"
+    },
+    {
+      "itemprop": "educationRpd"
+    },
+    {
+      "itemprop": "post"
+    },
+    {
+      "itemprop": "grant"
+    },
+    {
+      "itemprop": "eduLevel"
+    },
+    {
+      "itemprop": "objCnt"
+    },
+    {
+      "itemprop": "interInfo"
+    },
+    {
+      "itemprop": "regDate"
+    },
+    {
+      "itemprop": "addressPlaceGia"
+    },
+    {
+      "itemprop": "addressPlacePrac"
+    },
+    {
+      "itemprop": "finPlanDocLink"
+    },
+    {
+      "itemprop": "perevodDocLink"
+    },
+    {
+      "itemprop": "telephoneRep"
+    },
+    {
+      "itemprop": "Дочерний тег 2"
+    },
+    {
+      "itemprop": "orgName"
+    },
+    {
+      "itemprop": "baseNir"
+    },
+    {
+      "itemprop": "fullName"
+    },
+    {
+      "itemprop": "addressUchred"
+    },
+    {
+      "itemprop": "educationPlan"
+    },
+    {
+      "itemprop": "paidDog"
+    },
+    {
+      "itemprop": "profDevelopment"
+    },
+    {
+      "itemprop": "priemDocLink"
+    },
+    {
+      "itemprop": "localActOrder"
+    },
+    {
+      "itemprop": "divisionClauseDocLink"
+    },
+    {
+      "itemprop": "languageEl"
+    },
+    {
+      "itemprop": "finBRVolume"
+    },
+    {
+      "itemprop": "objOvz"
+    },
+    {
+      "itemprop": "filInfo"
+    },
+    {
+      "itemprop": "paidParents"
+    },
+    {
+      "itemprop": "objSq"
+    },
+    {
+      "itemprop": "eduName"
+    },
+    {
+      "itemprop": "educationShedule"
+    },
+    {
+      "itemprop": "eduOAccred"
+    },
+    {
+      "itemprop": "napravNir"
+    },
+    {
+      "itemprop": "name"
+    },
+    {
+      "itemprop": "numberBMVacant"
+    },
+    {
+      "itemprop": "finBFVolume"
+    },
+    {
+      "itemprop": "purposeFacilOvz"
+    },
+    {
+      "itemprop": "vozDocLink"
+    },
+    {
+      "itemprop": "site"
+    },
+    {
+      "itemprop": "addressPlaceOppo"
+    },
+    {
+      "itemprop": "interNum"
+    },
+    {
+      "itemprop": "parent"
+    },
+    {
+      "itemprop": "purposePrac"
+    },
+    {
+      "itemprop": "modeDocLink"
+    },
+    {
+      "itemprop": "v1"
+    },
+    {
+      "itemprop": "addressPlacePodg"
+    },
+    {
+      "itemprop": "eoisSide"
+    },
+    {
+      "itemprop": "copy"
+    },
+    {
+      "itemprop": "ustavDocLink"
+    },
+    {
+      "itemprop": "eduNir"
+    },
+    {
+      "itemprop": "rucovodstvoFil"
+    },
+    {
+      "itemprop": "paidEdu"
+    },
+    {
+      "itemprop": "academStat"
+    },
+    {
+      "itemprop": "dogReg"
+    },
+    {
+      "itemprop": "namePrac"
+    },
+    {
+      "itemprop": "fio"
+    },
+    {
+      "itemprop": "localActObSt"
+    },
+    {
+      "itemprop": "localActStud"
+    },
+    {
+      "itemprop": "eduFedTreb"
+    },
+    {
+      "itemprop": "interlNumOvz"
+    },
+    {
+      "itemprop": "telUchred"
+    },
+    {
+      "itemprop": "v1 "
+    },
+    {
+      "itemprop": "rucovodstvoZam"
+    },
+    {
+      "itemprop": "osnCab"
+    },
+    {
+      "itemprop": "workTimeRep"
+    },
+    {
+      "itemprop": "bdec"
+    },
+    {
+      "itemprop": "numberBFVacant"
+    },
+    {
+      "itemprop": "localActCollec"
+    },
+    {
+      "itemprop": "methodology"
+    },
+    {
+      "itemprop": "addressCab"
+    },
+    {
+      "itemprop": "eduOp"
+    },
+    {
+      "itemprop": "objName"
+    },
+    {
+      "itemprop": "vacant"
+    },
+    {
+      "itemprop": "addressPlaceSet"
+    },
+    {
+      "itemprop": "address"
+    },
+    {
+      "itemprop": "learningTerm"
+    },
+    {
+      "itemprop": "t1"
+    },
+    {
+      "itemprop": "objAddress"
+    },
+    {
+      "itemprop": "finPVolume"
+    },
+    {
+      "itemprop": "finRas"
+    },
+    {
+      "itemprop": "eduPr"
+    },
+    {
+      "itemprop": "Дочерний тег 1"
+    },
+    {
+      "itemprop": "websiteUchred"
+    },
+    {
+      "itemprop": "opMain"
+    },
+    {
+      "itemprop": "teachingDiscipline"
+    },
+    {
+      "itemprop": "comNetOvz"
+    },
+    {
+      "itemprop": "telephoneFil"
+    },
+    {
+      "itemprop": "uchredLaw"
+    },
+    {
+      "itemprop": "specExperience"
+    },
+    {
+      "itemprop": "eduStandartTreb"
+    },
+    {
+      "itemprop": "reportEduDocLink"
+    },
+    {
+      "itemprop": "osnPrac"
+    },
+    {
+      "itemprop": "child"
+    },
+    {
+      "itemprop": "addressPlaceDop"
+    },
+    {
+      "itemprop": "nameCab"
+    },
+    {
+      "itemprop": "Главный тег"
+    },
+    {
+      "itemprop": "support"
+    },
+    {
+      "itemprop": "ovz"
+    },
+    {
+      "itemprop": "eduAccred"
+    },
+    {
+      "itemprop": "volume"
+    },
+    {
+      "itemprop": "teachingStaff"
+    },
+    {
+      "itemprop": "ovzCab"
+    },
+    {
+      "itemprop": "workTime"
+    },
+    {
+      "itemprop": "eduPred"
+    },
+    {
+      "itemprop": "Применяемый атрибут"
+    },
+    {
+      "itemprop": "teachingOp"
+    },
+    {
+      "itemprop": "hostelNum"
+    },
+    {
+      "itemprop": "employeeQualification"
+    },
+    {
+      "itemprop": "eduFedDoc"
+    },
+    {
+      "itemprop": "degree"
+    },
+    {
+      "itemprop": "hostelInterOvz"
+    },
+    {
+      "itemprop": "paidSt"
+    },
+    {
+      "itemprop": "eduEl"
+    },
+    {
+      "itemprop": "email"
+    },
+    {
+      "itemprop": "nameFil"
+    },
+    {
+      "itemprop": "purposeCab"
+    },
+    {
+      "itemprop": "stateName"
+    },
+    {
+      "itemprop": "nameRep"
+    },
+    {
+      "itemprop": "eduPerevodEl"
+    },
+    {
+      "itemprop": "nameUchred"
+    }
+  ]
+}

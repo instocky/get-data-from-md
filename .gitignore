@@ -1,0 +1,60 @@
+# Виртуальное окружение
+venv/
+env/
+.venv/
+
+# Кеш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Файлы среды разработки
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Файлы Scrapy
+.scrapy
+
+# Файлы Playwright
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/
+
+# Скомпилированные файлы Python
+*.pyc
+
+# Файлы базы данных
+*.db
+*.sqlite3
+
+# Файлы настроек
+*.ini
+*.cfg
+!scrapy.cfg
+
+# Директории с выходными данными
+output/
+exports/
+
+# Файлы системы
+.DS_Store
+Thumbs.db
+
+# Файлы Nuitka
+*.build/
+*.dist/
+*.onefile-build/
+
+# Исполняемые файлы
+*.exe
+*.out
+
+# Users
+task*.md
+notes.md
