@@ -7,28 +7,39 @@ import os
 input_file = 'doc.md'
 
 # Имя выходного файла
-output_file = 'itemprop.json'
+output_file = '_itemprop.json'
 
 # Чтение содержимого входного файла
 with open(input_file, 'r', encoding='utf-8') as file:
     content = file.read()
 
-# Извлечение всех значений itemprop с помощью регулярного выражения
-itemprop_values = re.findall(r'itemprop="([^"]+)"', content)
+# Функция для извлечения itemprop значений из текста
+def extract_itemprops(text):
+    return list(set(re.findall(r'itemprop="([^"]+)"', text)))
 
-# Удаление дубликатов путем преобразования списка в множество и обратно в список
-unique_itemprop_values = list(set(itemprop_values))
+# Разделение содержимого на подразделы
+# Обновленное регулярное выражение, которое учитывает различные варианты нумерации
+sections = re.split(r'- \d+\.\s*(?:Подраздел\s*)?"([^"]+)"\.?', content)[1:]
 
-# Создание списка словарей для каждого уникального значения itemprop
-itemprop_list = [{"itemprop": value} for value in unique_itemprop_values]
+# Создание списка словарей для каждого подраздела
+sections_data = []
+for i in range(0, len(sections), 2):
+    section_name = sections[i].strip()
+    section_content = sections[i+1] if i+1 < len(sections) else ""
+    itemprops = extract_itemprops(section_content)
+    if itemprops:  # Добавляем секцию только если в ней есть itemprop
+        sections_data.append({
+            "section": section_name,
+            "itemprops": itemprops
+        })
 
-# Создание словаря с метаданными и списком itemprop
+# Создание словаря с метаданными и списком подразделов
 output_data = {
     "meta": {
         "created_at": datetime.now().isoformat(),
         "source_file": os.path.basename(input_file)
     },
-    "itemprop_values": itemprop_list
+    "sections": sections_data
 }
 
 # Запись данных в JSON файл
