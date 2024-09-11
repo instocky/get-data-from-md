@@ -86,6 +86,9 @@ def analyze_page(url, section_name, itemprops):
         hidden_items = []
 
         for prop in itemprops:
+            if prop in ['parent', 'child']:
+                continue
+
             element = soup.find(attrs={"itemprop": prop})
             if element:
                 if element.has_attr('class') and 'hidden' in element.get('class') and element.text.strip() == "Данные обновляются":
@@ -95,22 +98,24 @@ def analyze_page(url, section_name, itemprops):
             else:
                 missing_items.append(prop)
 
-        # Вывод в консоль
+        # Обновленный вывод в консоль
         print(f"\nАнализ страницы: {url}")
         print(f"\nСекция: {section_name}\n")
         print("Найденные itemprop:")
         for item in found_items:
             color_print(f"✅ {item}", GREEN)
-        print("\nСкрытые itemprop:")
-        for item in hidden_items:
-            color_print(f"🔸 {item}", ORANGE)
-        print("\nОтсутствующие itemprop:")
-        for item in missing_items:
-            color_print(f"❌ {item}", RED)
+        if hidden_items:
+            print("\nСкрытые itemprop:")
+            for item in hidden_items:
+                color_print(f"🔸 {item}", ORANGE)
+        if missing_items:
+            print("\nОтсутствующие itemprop:")
+            for item in missing_items:
+                color_print(f"❌ {item}", RED)
         print(f"\nИтого: {len(found_items)} найдено, {len(hidden_items)} скрыто, {len(missing_items)} отсутствует")
 
-        # Возвращаем HTML-фрагмент для отчета
-        return f"""
+        # Обновленный HTML-фрагмент для отчета
+        html_content = f"""
         <div class="page">
             <h2>Анализ страницы: {url}</h2>
             <h3>Секция: {section_name}</h3>
@@ -118,17 +123,26 @@ def analyze_page(url, section_name, itemprops):
             <ul>
                 {''.join(f'<li class="found">✅ {item}</li>' for item in found_items)}
             </ul>
+        """
+        if hidden_items:
+            html_content += f"""
             <h4>Скрытые itemprop:</h4>
             <ul>
                 {''.join(f'<li class="hidden">🔸 {item}</li>' for item in hidden_items)}
             </ul>
+            """
+        if missing_items:
+            html_content += f"""
             <h4>Отсутствующие itemprop:</h4>
             <ul>
                 {''.join(f'<li class="missing">❌ {item}</li>' for item in missing_items)}
             </ul>
+            """
+        html_content += f"""
             <p>Итого: {len(found_items)} найдено, {len(hidden_items)} скрыто, {len(missing_items)} отсутствует</p>
         </div>
         """
+        return html_content
 
     except requests.RequestException as e:
         error_message = f"Ошибка при запросе к {url}: {e}"
