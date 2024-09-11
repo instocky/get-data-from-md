@@ -1,11 +1,21 @@
 import json
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
+from urllib.parse import urlparse
 
 # Константы для цветного вывода
 GREEN = '\033[92m'
 RED = '\033[91m'
 RESET = '\033[0m'
+
+# Базовый URL
+BASE_URL = 'https://kamkb.ru/sveden/'
+BASE_URL = 'https://kotelbk.ru/sveden/'
+BASE_URL = 'https://academicol.ru/sveden/'
+
+# Получаем домен из BASE_URL
+DOMAIN = urlparse(BASE_URL).netloc
 
 # Словарь страниц
 PAGES = {
@@ -13,7 +23,7 @@ PAGES = {
     'struct': 'Структура и органы управления образовательной организацией',
     'document': 'Документы',
     'education': 'Образование',
-    'eduStandart': 'Образовательные стандарты и требования',
+    'eduStandarts': 'Образовательные стандарты и требования',
     'managers': 'Руководство',
     'employees': 'Педагогический состав',
     'objects': 'Материально-техническое обеспечение и оснащённость образовательного процесса. Доступная среда',
@@ -42,6 +52,28 @@ def color_print(text, color):
 def match_slug_to_section(slug):
     return PAGES.get(slug, "Неизвестная секция")
 
+def generate_html_report(results):
+    html_content = f"""
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Отчет по анализу {DOMAIN}</title>
+        <style>
+            body {{ font-family: Arial, sans-serif; }}
+            .found {{ color: green; }}
+            .missing {{ color: red; }}
+            .page {{ margin-bottom: 20px; border-bottom: 1px solid #ccc; }}
+        </style>
+    </head>
+    <body>
+        <h1>Отчет по анализу {DOMAIN}</h1>
+        <p>Дата создания: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+        {''.join(results)}
+    </body>
+    </html>
+    """
+    return html_content
+
 def analyze_page(url, section_name, itemprops):
     try:
         response = requests.get(url)
@@ -57,21 +89,38 @@ def analyze_page(url, section_name, itemprops):
             else:
                 missing_items.append(prop)
 
+        # Вывод в консоль (оставляем без изменений)
         print(f"\nАнализ страницы: {url}")
         print(f"\nСекция: {section_name}\n")
-
         print("Найденные itemprop:")
         for item in found_items:
             color_print(f"✅ {item}", GREEN)
-
         print("\nОтсутствующие itemprop:")
         for item in missing_items:
             color_print(f"❌ {item}", RED)
-
         print(f"\nИтого: {len(found_items)} найдено, {len(missing_items)} отсутствует")
 
+        # Возвращаем HTML-фрагмент для отчета
+        return f"""
+        <div class="page">
+            <h2>Анализ страницы: {url}</h2>
+            <h3>Секция: {section_name}</h3>
+            <h4>Найденные itemprop:</h4>
+            <ul>
+                {''.join(f'<li class="found">✅ {item}</li>' for item in found_items)}
+            </ul>
+            <h4>Отсутствующие itemprop:</h4>
+            <ul>
+                {''.join(f'<li class="missing">❌ {item}</li>' for item in missing_items)}
+            </ul>
+            <p>Итого: {len(found_items)} найдено, {len(missing_items)} отсутствует</p>
+        </div>
+        """
+
     except requests.RequestException as e:
-        print(f"Ошибка при запросе к {url}: {e}")
+        error_message = f"Ошибка при запросе к {url}: {e}"
+        print(error_message)
+        return f"<div class='page'><p style='color: red;'>{error_message}</p></div>"
 
 def main():
     itemprop_data = read_json_file('_itemprop.json')
@@ -79,14 +128,22 @@ def main():
         print("Невозможно продолжить выполнение без данных JSON.")
         return
     
-    base_url = 'https://kamkb.ru/sveden/'
+    results = []
     for slug, section_name in PAGES.items():
-        url = base_url + slug
+        url = BASE_URL + slug
         section_data = next((s for s in itemprop_data['sections'] if s['section'] == section_name), None)
         if section_data:
-            analyze_page(url, section_name, section_data['itemprops'])
+            result = analyze_page(url, section_name, section_data['itemprops'])
+            results.append(result)
         else:
             print(f"Предупреждение: Данные для секции '{section_name}' не найдены в JSON.")
+
+    # Генерируем и сохраняем HTML-отчет
+    html_report = generate_html_report(results)
+    report_filename = f"itemprop_report_{DOMAIN}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html"
+    with open(report_filename, 'w', encoding='utf-8') as f:
+        f.write(html_report)
+    print(f"\nОтчет сохранен в файл: {report_filename}")
 
 if __name__ == "__main__":
     main()
