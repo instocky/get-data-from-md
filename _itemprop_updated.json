@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "created_at": "2024-09-13T09:54:44.171302",
+    "source_file": "doc.md"
+  },
+  "sections": [
+    {
+      "section": "Основные сведения",
+      "itemprops": [
+        "uchredLaw",
+        "address",
+        "licenseDocLink",
+        "fullName",
+        "workTime",
+        "telephone",
+        "addressPlaceDop",
+        "regDate",
+        "addressPlaceGia",
+        "addressPlacePrac",
+        "addressPlacePodg",
+        "nameUchred",
+        "addressPlaceSet",
+        "copy",
+        "email"
+      ],
+      "optional_itemprops": [
+        "mailUchred",
+        "websiteUchred",
+        "addressUchred",
+        "addressPlaceOppo",
+        "shortName",
+        "telUchred",
+        "accreditationDocLink"
+      ]
+    },
+    {
+      "section": "Структура и органы управления образовательной организацией",
+      "itemprops": [
+        "post",
+        "fio",
+        "structOrgUprav",
+        "fioPost",
+        "addressStr",
+        "copy",
+        "name"
+      ],
+      "optional_itemprops": [
+        "websiteRep",
+        "repInfo",
+        "telephoneRep",
+        "nameRep",
+        "site",
+        "emailRep",
+        "emailFil",
+        "addressRep",
+        "workTimeFil",
+        "workTimeRep",
+        "nameFil",
+        "filInfo",
+        "telephoneFil",
+        "addressFil",
+        "divisionClauseDocLink",
+        "websiteFil",
+        "email"
+      ]
+    },
+    {
+      "section": "Документы",
+      "itemprops": [
+        "localActStud",
+        "modeDocLink",
+        "vozDocLink",
+        "localActOrder",
+        "priemDocLink",
+        "reportEduDocLink",
+        "tekKontrolDocLink",
+        "copy",
+        "perevodDocLink",
+        "ustavDocLink"
+      ],
+      "optional_itemprops": [
+        "prescriptionDocLink",
+        "localActCollec"
+      ]
+    },
+    {
+      "section": "Образование",
+      "itemprops": [
+        "eduPriemEl",
+        "eduNir",
+        "eduAccred",
+        "eduPerevodEl",
+        "resultNir",
+        "graduateJob",
+        "v1 ",
+        "t1",
+        "perechenNir",
+        "eduPrac",
+        "v1",
+        "eduOp",
+        "languageEl",
+        "eduChislenEl",
+        "baseNir",
+        "copy",
+        "napravNir",
+        "eduPred",
+        "learningTerm"
+      ],
+      "optional_itemprops": [
+        "educationShedule",
+        "methodology",
+        "eduPOAccred",
+        "eduEl",
+        "eduForm",
+        "educationPlan",
+        "eduProf",
+        "eduCode",
+        "opMain",
+        "orgName",
+        "eduAdOp",
+        "eduOAccred",
+        "eduLevel",
+        "dateEnd",
+        "educationRpd",
+        "eduName",
+        "eduPr"
+      ]
+    },
+    {
+      "section": "Образовательные стандарты и требования",
+      "itemprops": [
+        "copy",
+        "eduFedDoc"
+      ],
+      "optional_itemprops": [
+        "eduFedTreb",
+        "eduStandartTreb",
+        "eduStandartDoc"
+      ]
+    },
+    {
+      "section": "Руководство",
+      "itemprops": [
+        "rucovodstvoZam",
+        "copy",
+        "rucovodstvo"
+      ],
+      "optional_itemprops": [
+        "rucovodstvoRep",
+        "post",
+        "rucovodstvoFil",
+        "nameRep",
+        "telephone",
+        "fio",
+        "email",
+        "nameFil"
+      ]
+    },
+    {
+      "section": "Педагогический состав",
+      "itemprops": [
+        "genExperience",
+        "employeeQualification",
+        "specExperience",
+        "post",
+        "copy",
+        "teachingDiscipline",
+        "teachingLevel",
+        "fio",
+        "teachingOp",
+        "teachingStaff"
+      ],
+      "optional_itemprops": [
+        "degree",
+        "academStat",
+        "profDevelopment"
+      ]
+    },
+    {
+      "section": "Материально-техническое обеспечение и оснащённость образовательного процесса. Доступная среда",
+      "itemprops": [
+        "objSq",
+        "ovzPrac",
+        "osnPrac",
+        "comNet",
+        "purposeLibr",
+        "bdec",
+        "objOvz",
+        "erList",
+        "purposePrac",
+        "ovzCab",
+        "namePrac",
+        "addressPrac",
+        "interlNumOvz",
+        "nameCab",
+        "comNetOvz",
+        "eoisOwn",
+        "osnCab",
+        "objName",
+        "purposeEios",
+        "purposeSport",
+        "objAddress",
+        "ovz",
+        "purposeFacil",
+        "copy",
+        "purposeFacilOvz",
+        "eoisSide",
+        "addressCab",
+        "purposeCab"
+      ],
+      "optional_itemprops": [
+        "hostelInfo",
+        "interNumOvz",
+        "hostelInterOvz",
+        "objCnt",
+        "hostelNumOvz",
+        "techOvz",
+        "interInfo",
+        "interNum",
+        "hostelNum",
+        "erListOvz",
+        "localActObSt"
+      ]
+    },
+    {
+      "section": "Стипендии и меры поддержки обучающихся",
+      "itemprops": [
+        "copy",
+        "interlNumOvz"
+      ],
+      "optional_itemprops": [
+        "hostelInfo",
+        "interInfo",
+        "interNumOvz",
+        "localAct",
+        "hostelNumOvz",
+        "interNum",
+        "localActObSt",
+        "hostelNum",
+        "support",
+        "grant"
+      ]
+    },
+    {
+      "section": "Платные образовательные услуги",
+      "itemprops": [
+        "paidSt",
+        "paidDog",
+        "copy",
+        "paidEdu"
+      ],
+      "optional_itemprops": [
+        "paidParents"
+      ]
+    },
+    {
+      "section": "Финансово-хозяйственная деятельность",
+      "itemprops": [
+        "finPost",
+        "finRas",
+        "finBFVolume",
+        "finBMVolume",
+        "finPlanDocLink",
+        "copy",
+        "finYear",
+        "finPVolume",
+        "finBRVolume",
+        "volume"
+      ],
+      "optional_itemprops": []
+    },
+    {
+      "section": "Вакантные места для приёма (перевода) обучающихся",
+      "itemprops": [
+        "copy",
+        "eduProf"
+      ],
+      "optional_itemprops": [
+        "eduName",
+        "eduCourse",
+        "eduForm",
+        "numberBMVacant",
+        "vacant",
+        "eduLevel",
+        "numberBRVacant",
+        "numberPVacant",
+        "numberBFVacant",
+        "eduCode"
+      ]
+    },
+    {
+      "section": "Международное сотрудничество",
+      "itemprops": [
+        "copy"
+      ],
+      "optional_itemprops": [
+        "stateName",
+        "internationalDog",
+        "orgName",
+        "dogReg"
+      ]
+    },
+    {
+      "section": "Организация питания в образовательной организации",
+      "itemprops": [
+        "objSq",
+        "objName",
+        "health",
+        "objAddress",
+        "copy",
+        "objOvz",
+        "parent",
+        "child",
+        "meals"
+      ],
+      "optional_itemprops": [
+        "objCnt"
+      ]
+    }
+  ]
+}
